@@ -1,0 +1,128 @@
+/**
+ * Typography Rules & Editorial Styling
+ */
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.65;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-editorial);
+  color: var(--navy-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.heading-display {
+  font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.heading-xl {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.heading-lg {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.heading-md {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  font-weight: 600;
+}
+
+.heading-sm {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.editorial-quote {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--wine-primary);
+}
+
+.subheading-lead {
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--wine-primary);
+  padding: 0.35rem 0.85rem;
+  background: var(--wine-soft);
+  border: 1px solid rgba(120, 24, 43, 0.2);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+}
+
+.section-label.dark {
+  color: var(--gold-light);
+  background: rgba(199, 164, 94, 0.12);
+  border-color: rgba(199, 164, 94, 0.25);
+}
+
+.section-label.cyan {
+  color: var(--cyan-accent);
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.text-wine {
+  color: var(--wine-primary);
+}
+
+.text-navy {
+  color: var(--navy-primary);
+}
+
+.text-cyan {
+  color: var(--cyan-accent);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-light {
+  color: var(--text-on-dark-muted);
+}

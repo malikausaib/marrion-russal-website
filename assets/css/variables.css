@@ -1,0 +1,186 @@
+/**
+ * MARRION RUSSAL REMEDIES PVT. LTD.
+ * Design System Tokens & Multi-Theme Architecture
+ * Supported: Bright Mode, Dark Mode, Eye Protection Mode
+ */
+
+:root,
+[data-theme="bright"] {
+  /* Brand Core */
+  --navy-deep: #081220;
+  --navy-primary: #0e1d33;
+  --navy-card: #14243d;
+  --navy-elevated: #1b2e4d;
+  --navy-border: rgba(14, 165, 233, 0.15);
+
+  --wine-primary: #7b182b;
+  --wine-dark: #560f1e;
+  --wine-light: #9c223a;
+  --wine-soft: rgba(123, 24, 43, 0.1);
+
+  --gold-primary: #c5a059;
+  --gold-light: #dfc181;
+  --gold-soft: rgba(197, 160, 89, 0.14);
+
+  --cyan-accent: #0284c7;
+  --cyan-glow: rgba(14, 165, 233, 0.35);
+
+  /* Surfaces & Backgrounds - Appealing Layered Palette */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #eff4fa;
+  --bg-tertiary: #e2eaf4;
+  --bg-mesh-1: rgba(14, 29, 51, 0.04);
+  --bg-mesh-2: rgba(123, 24, 43, 0.035);
+  --surface-white: #ffffff;
+  --surface-card: #ffffff;
+  --surface-elevated: #ffffff;
+
+  /* Typography Colors */
+  --text-primary: #0a1424;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-on-dark: #f8fafc;
+  --text-on-dark-muted: #cbd5e1;
+
+  /* Borders & Dividers */
+  --border-light: rgba(14, 29, 51, 0.09);
+  --border-subtle: #cbd5e1;
+  --border-dark-subtle: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 5px rgba(14, 29, 51, 0.04);
+  --shadow-md: 0 6px 18px rgba(14, 29, 51, 0.07);
+  --shadow-lg: 0 12px 32px rgba(14, 29, 51, 0.09);
+  --shadow-xl: 0 20px 48px rgba(14, 29, 51, 0.12);
+  --shadow-dark: 0 18px 40px rgba(0, 0, 0, 0.4);
+
+  /* Header Blur */
+  --header-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* ==========================================================================
+   Dark Mode Theme
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-primary: #070d18;
+  --bg-secondary: #0c1626;
+  --bg-tertiary: #12213a;
+  --bg-mesh-1: rgba(14, 165, 233, 0.06);
+  --bg-mesh-2: rgba(225, 29, 72, 0.06);
+  --surface-white: #0f1c31;
+  --surface-card: #0d192d;
+  --surface-elevated: #14243f;
+
+  --navy-primary: #93c5fd;
+  --navy-deep: #03070e;
+  --navy-card: #0b1527;
+
+  --wine-primary: #e11d48;
+  --wine-dark: #be123c;
+  --wine-light: #fb7185;
+  --wine-soft: rgba(225, 29, 72, 0.16);
+
+  --gold-primary: #d4af37;
+  --gold-light: #fef08a;
+  --gold-soft: rgba(212, 175, 55, 0.18);
+
+  --cyan-accent: #38bdf8;
+  --cyan-glow: rgba(56, 189, 248, 0.45);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.18);
+  --border-dark-subtle: rgba(255, 255, 255, 0.15);
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 35px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 22px 55px rgba(0, 0, 0, 0.75);
+
+  --header-bg: rgba(7, 13, 24, 0.92);
+}
+
+/* ==========================================================================
+   Eye Protection Mode (Warm / Low-Blue-Light)
+   ========================================================================== */
+[data-theme="eye-care"] {
+  --bg-primary: #f7f2e6;
+  --bg-secondary: #ece5d3;
+  --bg-tertiary: #dfd5be;
+  --bg-mesh-1: rgba(180, 130, 60, 0.05);
+  --bg-mesh-2: rgba(140, 40, 50, 0.04);
+  --surface-white: #fcf9f2;
+  --surface-card: #fbf6ec;
+  --surface-elevated: #ffffff;
+
+  --navy-primary: #223347;
+  --navy-deep: #1a2533;
+  --navy-card: #28374a;
+
+  --wine-primary: #8b2336;
+  --wine-dark: #631725;
+  --wine-light: #a8364c;
+  --wine-soft: rgba(139, 35, 54, 0.12);
+
+  --gold-primary: #b38838;
+  --gold-light: #d6ad5e;
+  --gold-soft: rgba(179, 136, 56, 0.15);
+
+  --cyan-accent: #0f766e;
+  --cyan-glow: rgba(15, 118, 110, 0.25);
+
+  --text-primary: #281e18;
+  --text-secondary: #4f4237;
+  --text-muted: #756658;
+  --text-light: #9c8c7c;
+
+  --border-light: rgba(80, 60, 40, 0.11);
+  --border-subtle: #d2c5a5;
+  --border-dark-subtle: rgba(255, 255, 255, 0.15);
+
+  --shadow-sm: 0 2px 5px rgba(60, 45, 30, 0.04);
+  --shadow-md: 0 6px 18px rgba(60, 45, 30, 0.07);
+  --shadow-lg: 0 12px 30px rgba(60, 45, 30, 0.09);
+  --shadow-xl: 0 20px 45px rgba(60, 45, 30, 0.12);
+
+  --header-bg: rgba(247, 242, 230, 0.94);
+}
+
+:root {
+  /* Fonts */
+  --font-editorial: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Containers */
+  --container-max: 1320px;
+  --container-narrow: 1040px;
+}

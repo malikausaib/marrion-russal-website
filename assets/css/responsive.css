@@ -1,0 +1,1414 @@
+/**
+ * Responsive Media Queries
+ * Explicit testing targets: 375px, 390px, 430px, 768px, 1024px, 1440px, 1920px
+ * Strict Zero Horizontal Overflow Rules
+ */
+
+/* Prevent horizontal overflow unconditionally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1400px and Below (Standard Laptops & Scaled Displays)
+   ========================================================================== */
+@media (max-width: 1400px) {
+  .header-inner {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    gap: 0.85rem;
+  }
+
+  .brand-name {
+    font-size: 0.96rem;
+  }
+
+  .nav-desktop {
+    gap: 0.65rem;
+  }
+
+  .nav-link {
+    font-size: 0.73rem;
+    letter-spacing: 0.035em;
+  }
+
+  .theme-toggle-btn {
+    padding: 0.2rem 0.44rem;
+    font-size: 0.67rem;
+  }
+
+  .nav-cta-btn {
+    padding: 0.38rem 0.85rem;
+    font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   1200px and Below (Compact Laptops / Desktops)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .header-inner {
+    gap: 0.65rem;
+    padding-left: 0.85rem;
+    padding-right: 1.25rem;
+  }
+
+  .brand-logo-frame {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .brand-motto-sub {
+    font-size: 0.65rem;
+  }
+
+  .nav-desktop {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+  }
+
+  .theme-toggle-btn {
+    padding: 0.18rem 0.38rem;
+    font-size: 0.65rem;
+  }
+
+  .nav-cta-btn {
+    padding: 0.36rem 0.75rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* ==========================================================================
+   1024px and Below (Tablets in Landscape / Compact Screens)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .header-inner {
+    padding: 0.55rem 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 0.94rem;
+  }
+
+  .brand-motto-sub {
+    font-size: 0.65rem;
+  }
+
+  .nav-desktop {
+    gap: 0.45rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+  }
+
+  .theme-toggle-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.66rem;
+  }
+
+  .nav-cta-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-motto-quote {
+    border-left: none;
+    border-top: 2px solid var(--wine-primary);
+    border-bottom: 2px solid var(--wine-primary);
+    padding: 0.85rem 0;
+    margin: 0.75rem 0 1.25rem 0;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-visual-card {
+    order: -1;
+  }
+
+  .intro-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .divisions-container {
+    grid-template-columns: 1fr;
+  }
+
+  .divisions-nav-pane {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+    padding: 1.25rem;
+  }
+
+  .divisions-content-pane {
+    padding: 2rem 1.5rem;
+  }
+
+  .products-catalogue-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .directors-editorial-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .reach-schematic-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .reach-radar-visual {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .contact-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   768px and Below (Tablets in Portrait & All Mobile Phones)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Strict zero desktop nav on mobile */
+  .nav-desktop {
+    display: none !important;
+  }
+
+  /* Compact 56px-62px Mobile Header: [LOGO] ... [☰] */
+  .site-header {
+    min-height: 58px;
+    height: 58px;
+  }
+
+  .header-inner {
+    min-height: 58px;
+    height: 58px;
+    padding: 0.35rem 0.85rem;
+    gap: 0.5rem;
+    justify-content: space-between;
+    overflow: visible;
+  }
+
+  .brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .brand-logo-frame {
+    height: 2.15rem;
+    width: 2.15rem;
+    flex-shrink: 0;
+    padding: 0.1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .brand-title-wrap {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand-name {
+    font-size: clamp(0.76rem, 3.2vw, 0.88rem);
+    white-space: nowrap;
+    line-height: 1.15;
+    display: block;
+    font-weight: 700;
+  }
+
+  .brand-motto-sub {
+    font-size: 0.58rem;
+    white-space: nowrap;
+    line-height: 1.1;
+    margin-top: 1px;
+    display: block;
+  }
+
+  /* Hide theme switcher in top header bar on mobile (accessible in drawer) */
+  .header-right-actions .theme-switcher-group {
+    display: none !important;
+  }
+
+  .header-right-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    margin-right: 0;
+  }
+
+  /* Compact touch-friendly mobile menu button */
+  .mobile-nav-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.45rem;
+    background: var(--surface-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    color: var(--navy-primary);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-toggle:focus-visible {
+    outline: 2px solid var(--wine-primary);
+    outline-offset: 2px;
+  }
+
+  /* Mobile Drawer High-Priority Stacking Context (Above All Page Content) */
+  .mobile-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 2500;
+  }
+
+  /* ==========================================================================
+     Compact Hero Section (No 100vh stretch, fast access to content)
+     ========================================================================== */
+  .hero-section {
+    min-height: auto;
+    padding: 1.5rem 0 1.25rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-meta-strip {
+    justify-content: center;
+    gap: 0.45rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .hero-badge-year {
+    font-size: 0.68rem;
+    padding: 0.22rem 0.6rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 5.8vw, 1.85rem);
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 0.35rem;
+  }
+
+  .hero-motto-quote {
+    font-size: clamp(0.92rem, 3.2vw, 1.05rem);
+    padding: 0.35rem 0;
+    margin: 0.35rem 0 0.65rem 0;
+    line-height: 1.35;
+    border-left: none;
+    border-top: 1px solid var(--wine-primary);
+    border-bottom: 1px solid var(--wine-primary);
+    display: inline-block;
+  }
+
+  .hero-lead-text {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+  }
+
+  .hero-cta-group {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-outline {
+    flex: 1 1 auto;
+    max-width: 200px;
+    justify-content: center;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.76rem;
+    min-height: 44px;
+    border-radius: var(--radius-pill);
+    box-sizing: border-box;
+  }
+
+  /* Compact Hero Visual Seal */
+  .hero-visual-card {
+    order: -1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-seal-square {
+    width: 130px;
+    height: 130px;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 25px rgba(123, 24, 43, 0.15);
+  }
+
+  .hero-seal-stats-bar {
+    width: auto;
+    max-width: 280px;
+    padding: 0.35rem 0.75rem;
+    margin-top: 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .hero-seal-stat-val {
+    font-size: 0.82rem;
+  }
+
+  .hero-seal-stat-label {
+    font-size: 0.56rem;
+  }
+
+  /* ==========================================================================
+     Controlled Rhythm Page Spacing & Typography
+     ========================================================================== */
+  .page-section {
+    padding: 2.25rem 0;
+  }
+
+  .section-header-block {
+    margin-bottom: 1.25rem;
+  }
+
+  .heading-xl.section-title {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+  }
+
+  .section-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 0.35rem;
+  }
+
+  /* ==========================================================================
+     About Section
+     ========================================================================== */
+  .intro-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .intro-statement {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .subheading-lead {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .intro-card-fact-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .fact-item {
+    padding: 0.65rem 0.5rem;
+    text-align: center;
+  }
+
+  .fact-label {
+    font-size: 0.6rem;
+  }
+
+  .fact-value {
+    font-size: 0.95rem;
+  }
+
+  .intro-image-wrapper {
+    max-height: 220px;
+    overflow: hidden;
+  }
+
+  /* ==========================================================================
+     Divisions Section — Space-Efficient Accordion
+     ========================================================================== */
+  .divisions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .divisions-nav-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .division-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 0.85rem;
+    min-height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-card);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-fast);
+  }
+
+  .division-nav-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .division-nav-code {
+    font-size: 0.65rem;
+  }
+
+  .division-nav-number {
+    font-size: 0.62rem;
+  }
+
+  .division-nav-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 0.5rem;
+    flex: 1;
+    color: var(--navy-primary);
+  }
+
+  .division-nav-toggle-icon {
+    display: inline-block;
+    font-size: 1.15rem;
+    color: var(--gold-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .division-nav-btn.active {
+    border-color: var(--gold-primary);
+    background: var(--surface-card);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
+  }
+
+  .divisions-content-pane {
+    padding: 1.15rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    background: var(--surface-card);
+  }
+
+  .division-detail-title {
+    font-size: 1.15rem;
+  }
+
+  .division-detail-summary {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .therapeutic-tags-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .therapeutic-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.68rem;
+    min-height: 44px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .therapeutic-tag-gastro {
+    padding: 0.35rem 0.45rem;
+  }
+
+  .therapeutic-stacked-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.12;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+  }
+
+  .therapeutic-line {
+    display: block;
+    text-align: center;
+  }
+
+  /* ==========================================================================
+     Product Catalogue — Compact 2-Column Grid
+     ========================================================================== */
+  .catalogue-controls-bar {
+    padding: 0.85rem 0.65rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .catalogue-search-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .product-search-input {
+    min-height: 42px;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  }
+
+  .catalogue-status-badge {
+    font-size: 0.72rem;
+    align-self: flex-start;
+  }
+
+  .catalogue-filters-track {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+    gap: 0.35rem;
+    scrollbar-width: none;
+  }
+
+  .catalogue-filters-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    white-space: nowrap;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.68rem;
+    min-height: 36px;
+    flex-shrink: 0;
+  }
+
+  /* Compact 2-column product grid */
+  .products-catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .product-card {
+    padding: 0.75rem 0.6rem;
+    min-height: 195px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .product-card-image-wrap {
+    height: 125px;
+    padding: 0.35rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .product-card-thumb {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .product-card-top {
+    margin-bottom: 0.35rem;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .product-family-tag {
+    font-size: 0.58rem;
+    padding: 0.12rem 0.35rem;
+    letter-spacing: 0.02em;
+  }
+
+  .product-formulation-tag {
+    font-size: 0.56rem;
+    padding: 0.12rem 0.35rem;
+  }
+
+  .product-card-name {
+    font-size: 0.8rem;
+    line-height: 1.22;
+    margin-bottom: 0.35rem;
+    min-height: 2.1em;
+    font-weight: 700;
+  }
+
+  .product-division-name {
+    font-size: 0.58rem;
+    line-height: 1.2;
+    margin-bottom: 0.45rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-card-action {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .btn-card-action {
+    width: 100%;
+    min-height: 36px;
+    padding: 0.35rem 0.45rem;
+    font-size: 0.66rem;
+    font-weight: 700;
+    border-radius: var(--radius-xs);
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* ==========================================================================
+     Product Detail Modal — Compact Mobile Flow & Accordion
+     ========================================================================== */
+  .modal-dialog,
+  .product-modal-dialog {
+    margin: 0.5rem;
+    max-height: 92vh;
+    max-width: calc(100% - 1rem);
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .modal-product-name {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  /* Mobile ordering: Image -> Specs Accordion -> Purchase Card */
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.85rem;
+    gap: 0.85rem;
+  }
+
+  .modal-image-col {
+    order: 1;
+    width: 100%;
+  }
+
+  .modal-product-photo-wrap {
+    max-width: 170px;
+    max-height: 220px;
+    min-height: 160px;
+    padding: 0.5rem;
+    margin: 0 auto;
+    border-radius: var(--radius-sm);
+  }
+
+  .modal-product-photo {
+    max-height: 205px;
+    max-width: 100%;
+  }
+
+  .modal-image-placeholder {
+    max-width: 140px;
+    max-height: 120px;
+    aspect-ratio: auto;
+    padding: 0.65rem;
+    margin: 0 auto;
+    border-radius: var(--radius-sm);
+  }
+
+  .modal-image-placeholder svg {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .modal-specs-col {
+    order: 2;
+    width: 100%;
+  }
+
+  .modal-purchase-card {
+    order: 3;
+    padding: 0.85rem;
+    margin: 0;
+    border-radius: var(--radius-sm);
+  }
+
+  .purchase-header-wrap {
+    margin-bottom: 0.65rem;
+  }
+
+  .purchase-section-title {
+    font-size: 0.95rem;
+  }
+
+  .purchase-section-desc {
+    font-size: 0.78rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .purchase-basket-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .btn-add-basket-large,
+  .btn-view-basket-modal,
+  .btn-continue-shopping-modal {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    font-size: 0.8rem;
+  }
+
+  .purchase-direct-options-block {
+    margin-top: 0.75rem;
+    padding-top: 0.65rem;
+  }
+
+  .purchase-actions-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .btn-purchase-action,
+  .btn-enquiry {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .purchase-meta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    font-size: 0.7rem;
+    margin-top: 0.65rem;
+  }
+
+  .purchase-meta-dot {
+    display: none;
+  }
+
+  /* Specifications Accordion */
+  .modal-specs-col {
+    order: 3;
+    width: 100%;
+    gap: 0.45rem;
+  }
+
+  .spec-accordion-header {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.72rem;
+    min-height: 42px;
+  }
+
+  .spec-accordion-body {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .spec-value-placeholder {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .modal-footer-bar {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .modal-footer-tag {
+    font-size: 0.68rem;
+  }
+
+  /* ==========================================================================
+     Management Section — Compact Editorial Profiles
+     ========================================================================== */
+  .directors-editorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .director-card {
+    padding: 0.85rem 0.55rem;
+    text-align: center;
+    border-radius: var(--radius-sm);
+  }
+
+  .director-monogram-seal {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    margin: 0 auto 0.4rem auto;
+  }
+
+  .director-role-tag {
+    font-size: 0.6rem;
+    padding: 0.12rem 0.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .director-name {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+  }
+
+  .director-company-sub {
+    font-size: 0.58rem;
+    line-height: 1.2;
+  }
+
+  .director-card-divider {
+    margin: 0.4rem auto;
+    width: 28px;
+  }
+
+  .director-designation-badge {
+    font-size: 0.56rem;
+    padding: 0.2rem 0.35rem;
+    justify-content: center;
+  }
+
+  /* ==========================================================================
+     Our Reach & Representatives — Compact Placeholders
+     ========================================================================== */
+  .reach-schematic-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .reach-radar-visual {
+    display: none; /* Hide huge empty circle visual on phone */
+  }
+
+  .official-notice-box {
+    padding: 0.85rem;
+  }
+
+  .official-notice-title {
+    font-size: 0.95rem;
+  }
+
+  .official-notice-text {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .reach-future-schema-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .schema-node-card {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.68rem;
+    min-height: 40px;
+    box-sizing: border-box;
+  }
+
+  /* Hide huge empty representative directory blueprint table */
+  .reps-schema-table-preview {
+    display: none;
+  }
+
+  .reps-notice-strip {
+    padding: 1.15rem 0.85rem;
+    text-align: center;
+  }
+
+  .reps-notice-strip svg {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .reps-notice-strip h4 {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .reps-notice-strip p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  /* ==========================================================================
+     Contact Section & Footer
+     ========================================================================== */
+  .contact-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .contact-info-panel,
+  .contact-form-panel {
+    padding: 1.15rem 0.85rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .contact-company-title {
+    font-size: 1.05rem;
+  }
+
+  .contact-motto-line {
+    font-size: 0.76rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-detail-block {
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-icon-bubble {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .contact-icon-bubble svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-detail-label {
+    font-size: 0.65rem;
+  }
+
+  .contact-detail-content {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .form-control {
+    min-height: 44px;
+    font-size: 0.82rem;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .form-submit-btn {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
+
+  .site-footer {
+    padding: 1.85rem 0 1.25rem 0;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-logo-seal {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0.35rem;
+  }
+
+  .footer-brand-name {
+    font-size: 0.9rem;
+  }
+
+  .footer-motto {
+    font-size: 0.7rem;
+  }
+
+  .footer-address-block {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    font-size: 0.66rem;
+  }
+
+  .footer-creator-credit {
+    font-size: 0.88rem;
+    margin: 0.35rem 0;
+    color: var(--text-muted);
+  }
+
+  /* ==========================================================================
+     Shopping Desk Drawer & Floating Basket Pill (Mobile)
+     ========================================================================== */
+  .basket-drawer-panel {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .floating-basket-wrap {
+    position: fixed;
+    bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px));
+    right: 0.85rem;
+    z-index: 250;
+    max-width: fit-content;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+
+  .mobile-nav-active .floating-basket-wrap {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .floating-basket-btn {
+    height: 42px;
+    min-height: 42px;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-pill);
+    gap: 0.45rem;
+    box-shadow: 0 4px 16px rgba(14, 29, 51, 0.4), 0 0 10px rgba(197, 160, 89, 0.25);
+  }
+
+  .floating-basket-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .basket-badge-count {
+    width: 16px;
+    height: 16px;
+    font-size: 0.62rem;
+  }
+
+  .floating-basket-title {
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+  }
+
+  .floating-basket-subtitle {
+    font-size: 0.58rem;
+  }
+
+  .basket-drawer-header {
+    padding: 1rem 0.85rem;
+  }
+
+  .basket-drawer-body {
+    padding: 0.85rem;
+  }
+
+  .basket-drawer-footer {
+    padding: 0.85rem;
+  }
+
+  .basket-item-card {
+    padding: 0.75rem;
+    gap: 0.65rem;
+  }
+
+  .basket-stepper-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .btn-proceed-purchase,
+  .btn-continue-shopping-drawer {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
+
+  /* Responsive Checkout Form */
+  .checkout-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .checkout-section-box {
+    padding: 0.95rem;
+  }
+
+  .checkout-total-row {
+    padding: 0.75rem;
+  }
+
+  .btn-pay-now {
+    min-height: 48px;
+    font-size: 0.9rem;
+  }
+
+  .admin-modal-panel {
+    width: 96%;
+    max-height: 94vh;
+  }
+}
+
+/* ==========================================================================
+   480px and Below (Specifically Tuned for 430px, 390px, 375px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .site-container,
+  .site-container-narrow,
+  .header-inner {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .header-inner {
+    padding: 0.35rem 0.65rem;
+  }
+
+  .brand-logo-frame {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .brand-name {
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
+
+  .brand-motto-sub {
+    font-size: 0.54rem;
+  }
+
+  .mobile-nav-toggle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    padding: 0.35rem;
+  }
+
+  .hero-section {
+    padding: 1.25rem 0 1rem 0;
+  }
+
+  .hero-title {
+    font-size: clamp(1.35rem, 6.2vw, 1.7rem);
+  }
+
+  .hero-motto-quote {
+    font-size: 0.88rem;
+    padding: 0.3rem 0;
+  }
+
+  .hero-lead-text {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-seal-square {
+    width: 110px;
+    height: 110px;
+    padding: 0.4rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.45rem;
+  }
+
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-outline {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .intro-card-fact-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+  }
+
+  .page-section {
+    padding: 1.75rem 0;
+  }
+
+  /* 2-column catalogue at 375px/390px/430px */
+  .products-catalogue-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .product-card {
+    padding: 0.65rem 0.5rem;
+    min-height: 185px;
+  }
+
+  .product-card-name {
+    font-size: 0.76rem;
+    line-height: 1.2;
+    min-height: 2em;
+  }
+
+  .btn-card-action {
+    font-size: 0.62rem;
+    min-height: 34px;
+    padding: 0.3rem 0.25rem;
+  }
+
+  .directors-editorial-grid {
+    gap: 0.5rem;
+  }
+
+  .director-card {
+    padding: 0.75rem 0.45rem;
+  }
+
+  .director-name {
+    font-size: 0.78rem;
+  }
+
+  .director-role-tag {
+    font-size: 0.56rem;
+  }
+
+  .director-company-sub {
+    font-size: 0.54rem;
+  }
+
+  /* Floating basket compact pill */
+  .floating-basket-wrap {
+    bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    right: 0.65rem;
+  }
+
+  .floating-basket-btn {
+    padding: 0.35rem 0.65rem;
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .floating-basket-subtitle {
+    display: none; /* Hide subtitle on tiny screens, keeping title + badge */
+  }
+
+  .floating-basket-title {
+    font-size: 0.7rem;
+  }
+
+  .toast-notification {
+    bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    left: 0.65rem;
+    right: 0.65rem;
+    text-align: center;
+    font-size: 0.78rem;
+    padding: 0.65rem 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .bg-ambient-orb,
+  .ecg-animated,
+  .float-subtle {
+    animation: none !important;
+  }
+}
+

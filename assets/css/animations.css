@@ -1,0 +1,499 @@
+/**
+ * Sophisticated Motion, Ambient Background Color Animations & Circular Branded Logo Cursor
+ * Fully honors prefers-reduced-motion
+ */
+
+/* ==========================================================================
+   Background Ambient Color Animations
+   ========================================================================== */
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(45px, -30px) scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(-30px, 25px) scale(0.95);
+    opacity: 0.55;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-beacon {
+  0% {
+    box-shadow: 0 0 0 0 rgba(123, 24, 43, 0.55);
+    transform: scale(0.98);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(123, 24, 43, 0);
+    transform: scale(1.04);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(123, 24, 43, 0);
+    transform: scale(0.98);
+  }
+}
+
+@keyframes ecg-dash {
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+.ecg-animated {
+  stroke-dasharray: 20 6;
+  animation: ecg-dash 30s linear infinite;
+}
+
+/* ==========================================================================
+   Vibrant Ambient Colored Orbs (Transforming Basic White to Rich Color)
+   ========================================================================== */
+
+.bg-ambient-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+@keyframes aurora-float-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 45px) scale(1.12); }
+  100% { transform: translate(-40px, 70px) scale(0.95); }
+}
+
+@keyframes aurora-float-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-70px, 50px) scale(1.15); }
+  100% { transform: translate(30px, -45px) scale(0.92); }
+}
+
+@keyframes aurora-float-3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -60px) scale(1.18); }
+  100% { transform: translate(-60px, 30px) scale(0.96); }
+}
+
+@keyframes aurora-float-4 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, -40px) scale(1.1); }
+  100% { transform: translate(45px, 50px) scale(1.05); }
+}
+
+@keyframes aurora-float-5 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.14); }
+  100% { transform: translate(-50px, -35px) scale(0.94); }
+}
+
+/* 1. Rich Bordeaux Ruby Orb (Top-Left) */
+.orb-wine {
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(190, 18, 60, 0.32) 0%, rgba(123, 24, 43, 0.18) 45%, transparent 70%);
+  top: -50px;
+  left: -120px;
+  animation: aurora-float-1 20s ease-in-out infinite alternate;
+}
+
+/* 2. Vibrant Azure / Sapphire Orb (Top-Right) */
+.orb-azure {
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.34) 0%, rgba(14, 165, 233, 0.18) 45%, transparent 70%);
+  top: 50px;
+  right: -120px;
+  animation: aurora-float-2 22s ease-in-out infinite alternate;
+}
+
+/* 3. Luminous Warm Gold & Amber Orb (Center / Hero) */
+.orb-gold {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.28) 0%, rgba(197, 160, 89, 0.16) 50%, transparent 70%);
+  top: 35%;
+  left: 35%;
+  animation: aurora-float-3 18s ease-in-out infinite alternate;
+}
+
+/* 4. Royal Indigo & Navy Orb (Mid-Left) */
+.orb-navy {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.28) 0%, rgba(30, 58, 138, 0.18) 45%, transparent 70%);
+  top: 60%;
+  left: -150px;
+  animation: aurora-float-4 25s ease-in-out infinite alternate;
+}
+
+/* 5. Clean Clinical Emerald / Teal Orb (Bottom-Right) */
+.orb-teal {
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.3) 0%, rgba(20, 184, 166, 0.18) 45%, transparent 70%);
+  bottom: -50px;
+  right: -80px;
+  animation: aurora-float-5 21s ease-in-out infinite alternate;
+}
+
+/* Dark Theme Rich Colorful Orbs */
+[data-theme="dark"] .orb-wine {
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.35) 0%, rgba(136, 19, 55, 0.4) 50%, transparent 70%);
+}
+[data-theme="dark"] .orb-azure {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(14, 116, 144, 0.4) 50%, transparent 70%);
+}
+[data-theme="dark"] .orb-gold {
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.25) 0%, rgba(180, 83, 9, 0.32) 50%, transparent 70%);
+}
+[data-theme="dark"] .orb-navy {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.32) 0%, rgba(30, 58, 138, 0.4) 50%, transparent 70%);
+}
+[data-theme="dark"] .orb-teal {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.3) 0%, rgba(15, 118, 110, 0.35) 50%, transparent 70%);
+}
+
+/* Eye Care Mode Warm Ambient Orbs */
+[data-theme="eye-care"] .orb-wine {
+  background: radial-gradient(circle, rgba(159, 18, 57, 0.22) 0%, rgba(99, 23, 37, 0.16) 50%, transparent 70%);
+}
+[data-theme="eye-care"] .orb-azure {
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.22) 0%, rgba(43, 58, 74, 0.14) 50%, transparent 70%);
+}
+[data-theme="eye-care"] .orb-gold {
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.22) 0%, rgba(217, 119, 6, 0.15) 50%, transparent 70%);
+}
+[data-theme="eye-care"] .orb-navy {
+  background: radial-gradient(circle, rgba(80, 55, 30, 0.18) 0%, rgba(60, 45, 25, 0.12) 50%, transparent 70%);
+}
+[data-theme="eye-care"] .orb-teal {
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.2) 0%, rgba(20, 184, 166, 0.14) 50%, transparent 70%);
+}
+
+/* Floating Seal */
+.float-subtle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Coordinated Dual Circular Cursor (Small, Sleek, No Square Box!)
+   - Front Cursor: Small circular badge with company logo at exact pointer
+   - Back Follower: Smooth circular aura ring trailing behind
+   ========================================================================== */
+
+/* 1. Front Cursor (Snaps immediately to mouse pointer) */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 100000;
+  border-radius: 50% !important;
+  background: #ffffff;
+  border: 1.5px solid var(--wine-primary);
+  box-shadow: 0 0 8px rgba(123, 24, 43, 0.45), 0 2px 4px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: width 0.18s cubic-bezier(0.16, 1, 0.3, 1), height 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s, box-shadow 0.18s;
+  overflow: hidden;
+  will-change: left, top, transform;
+}
+
+#cursor-dot img {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+  border-radius: 50% !important;
+  display: block;
+  pointer-events: none;
+}
+
+/* 2. Back Follower (Circular Aura Ring that smoothly glides behind) */
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  pointer-events: none;
+  z-index: 99999;
+  border-radius: 50% !important;
+  background: transparent;
+  border: 1.5px solid rgba(123, 24, 43, 0.45);
+  box-shadow: 0 0 14px rgba(197, 160, 89, 0.35);
+  transform: translate(-50%, -50%);
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), height 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s, box-shadow 0.2s;
+  will-change: left, top, transform;
+}
+
+/* Interactive Hover States */
+#cursor-dot.cursor-hover {
+  width: 24px;
+  height: 24px;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(197, 160, 89, 0.7);
+}
+
+#cursor-ring.cursor-hover {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(197, 160, 89, 0.85);
+  box-shadow: 0 0 22px rgba(197, 160, 89, 0.65), 0 0 8px rgba(123, 24, 43, 0.45);
+}
+
+/* Hide custom cursors entirely on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Smooth reveal animations */
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* ==========================================================================
+   Sophisticated Sliding Brand Reveal Opening Curtain (~2.7s Cinematic Sequence)
+   ========================================================================== */
+
+.brand-reveal-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  overflow: hidden;
+  background: #060e19;
+}
+
+.brand-reveal-curtain.instant-hide {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Dual-panel split curtain (slides smoothly up and down) */
+.reveal-curtain-top,
+.reveal-curtain-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50.5%;
+  background: radial-gradient(ellipse at 50% 50%, #0d1e34 0%, #060e19 100%);
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+  z-index: 1;
+}
+
+/* 0.0s - 0.6s: Branded opening background ambiance appears smoothly */
+.reveal-curtain-top::before,
+.reveal-curtain-bottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.08) 0%, rgba(139, 21, 56, 0.06) 45%, transparent 70%);
+  opacity: 0;
+  animation: reveal-bg-ambient 0.6s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes reveal-bg-ambient {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.reveal-curtain-top {
+  top: 0;
+  transform-origin: top center;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.reveal-curtain-bottom {
+  bottom: 0;
+  transform-origin: bottom center;
+  border-top: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+/* Exactly Centered Logo Stage */
+.reveal-center-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  max-width: 90vw;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Official Logo Wrapper with Subtle Refined Entrance (0.6s - 1.4s) */
+.reveal-logo-wrapper {
+  width: clamp(120px, 14vw, 150px);
+  height: clamp(120px, 14vw, 150px);
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 32px rgba(197, 160, 89, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.93);
+  animation: reveal-logo-enter 0.8s cubic-bezier(0.2, 0.8, 0.25, 1) 0.6s both;
+  will-change: opacity, transform;
+}
+
+@keyframes reveal-logo-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal-centered-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.reveal-motto-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(0.82rem, 2.2vw, 0.98rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.85rem;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  animation: reveal-motto-in 0.5s ease-out 1.0s both;
+}
+
+@keyframes reveal-motto-in {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scientific scanline beam sweep under centered logo */
+.reveal-scanline-beam {
+  position: absolute;
+  bottom: -4px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-primary) 50%, var(--azure-light) 75%, transparent 100%);
+  opacity: 0;
+  animation: reveal-beam-sweep 0.7s cubic-bezier(0.2, 0.8, 0.25, 1) 1.05s both;
+}
+
+@keyframes reveal-beam-sweep {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.2);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scaleX(1);
+    box-shadow: 0 0 16px rgba(197, 160, 89, 0.8);
+  }
+  100% {
+    opacity: 0.25;
+    transform: scaleX(1.05);
+  }
+}
+
+/* Sliding curtain transition out (2.0s - 2.7s) */
+.brand-reveal-curtain.reveal-slide-out .reveal-curtain-top {
+  transform: translateY(-100%);
+}
+
+.brand-reveal-curtain.reveal-slide-out .reveal-curtain-bottom {
+  transform: translateY(100%);
+}
+
+.brand-reveal-curtain.reveal-slide-out .reveal-center-stage {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+/* Mobile size adaptation (375px, 390px, 430px) */
+@media (max-width: 480px) {
+  .reveal-logo-wrapper {
+    width: clamp(96px, 26vw, 115px);
+    height: clamp(96px, 26vw, 115px);
+    padding: 0.4rem;
+  }
+  .reveal-motto-sub {
+    font-size: 0.76rem;
+    margin-top: 0.65rem;
+  }
+  .reveal-center-stage {
+    padding: 1rem;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .bg-ambient-orb,
+  .float-subtle,
+  .ecg-animated {
+    animation: none !important;
+  }
+  .reveal-curtain-top,
+  .reveal-curtain-bottom {
+    transition: none !important;
+  }
+  .brand-reveal-curtain.reveal-slide-out {
+    opacity: 0 !important;
+    transition: opacity 0.15s ease !important;
+  }
+}

@@ -36,7 +36,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/gasoril-capsule.webp"
+    image: "products/gasoril-capsule.webp"
   },
   {
     id: "gasoril-mps-syrup",
@@ -78,7 +78,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/gasoril-psc.webp"
+    image: "products/gasoril-psc.webp"
   },
   {
     id: "gasoril-p-drops-suspension",
@@ -106,7 +106,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/gasoril-kid.webp"
+    image: "products/gasoril-kid.webp"
   },
   {
     id: "gasoril-raft-syrup",
@@ -152,7 +152,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/nasril-xp.webp"
+    image: "products/nasril-xp.webp"
   },
   {
     id: "nasril-x-spray-drop",
@@ -166,7 +166,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/nasril-x.webp"
+    image: "products/nasril-x.webp"
   },
   {
     id: "nasril-f-spray",
@@ -180,7 +180,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/nasril-f.webp"
+    image: "products/nasril-f.webp"
   },
   {
     id: "nasril-ax-syrup",
@@ -236,7 +236,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/sucracell-o.webp"
+    image: "products/sucracell-o.webp"
   },
   {
     id: "sucracell-plain-suspension",
@@ -264,7 +264,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/devac-syrup.webp"
+    image: "products/devac-syrup.webp"
   },
   {
     id: "devac-kid-syrup",
@@ -348,7 +348,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/softex-moisturiser.webp"
+    image: "products/softex-moisturiser.webp"
   },
   {
     id: "softex-max-moisturiser",
@@ -390,7 +390,7 @@ export const PRODUCTS = [
     indications: "[Information to be added]",
     dosage: "[Information to be added]",
     packaging: "[Information to be added]",
-    image: "public/products/shadex-sunscreen.webp"
+    image: "products/shadex-sunscreen.webp"
   },
   {
     id: "ketotos-soap",

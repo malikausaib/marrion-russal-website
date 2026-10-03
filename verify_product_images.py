@@ -8,16 +8,16 @@ print('MARRION RUSSAL REMEDIES - PRODUCT IMAGE VERIFICATION AUDIT')
 print('=' * 80)
 
 EXPECTED_MAPPING = {
-    'gasoril-capsule': ('GASORIL CAPSULE', 'public/products/gasoril-capsule.webp'),
-    'gasoril-psc-tablet': ('GASORIL PSC TABLET', 'public/products/gasoril-psc.webp'),
-    'gasoril-kid-drops': ('GASORIL KID DROPS', 'public/products/gasoril-kid.webp'),
-    'nasril-xp-spray-drop': ('NASRIL XP SPRAY/DROP', 'public/products/nasril-xp.webp'),
-    'nasril-x-spray-drop': ('NASRIL X SPRAY/DROP', 'public/products/nasril-x.webp'),
-    'nasril-f-spray': ('NASRIL F SPRAY', 'public/products/nasril-f.webp'),
-    'sucracell-o-suspension': ('SUCRACELL O SUSPENSION', 'public/products/sucracell-o.webp'),
-    'devac-syrup': ('DEVAC SYRUP', 'public/products/devac-syrup.webp'),
-    'softex-moisturiser': ('SOFTEX MOISTURISER', 'public/products/softex-moisturiser.webp'),
-    'shadex-sunscreen': ('SHADEX SUNSCREEN', 'public/products/shadex-sunscreen.webp'),
+    'gasoril-capsule': ('GASORIL CAPSULE', 'products/gasoril-capsule.webp'),
+    'gasoril-psc-tablet': ('GASORIL PSC TABLET', 'products/gasoril-psc.webp'),
+    'gasoril-kid-drops': ('GASORIL KID DROPS', 'products/gasoril-kid.webp'),
+    'nasril-xp-spray-drop': ('NASRIL XP SPRAY/DROP', 'products/nasril-xp.webp'),
+    'nasril-x-spray-drop': ('NASRIL X SPRAY/DROP', 'products/nasril-x.webp'),
+    'nasril-f-spray': ('NASRIL F SPRAY', 'products/nasril-f.webp'),
+    'sucracell-o-suspension': ('SUCRACELL O SUSPENSION', 'products/sucracell-o.webp'),
+    'devac-syrup': ('DEVAC SYRUP', 'products/devac-syrup.webp'),
+    'softex-moisturiser': ('SOFTEX MOISTURISER', 'products/softex-moisturiser.webp'),
+    'shadex-sunscreen': ('SHADEX SUNSCREEN', 'products/shadex-sunscreen.webp'),
     'nasril-s': ('NASRIL-S', 'assets/images/nasril-s.jpg'),
 }
 

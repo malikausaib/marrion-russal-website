@@ -363,16 +363,16 @@ def seed_database():
 
         # Synchronize official pharmaceutical product images
         product_images = {
-            'gasoril-capsule': 'public/products/gasoril-capsule.webp',
-            'gasoril-psc-tablet': 'public/products/gasoril-psc.webp',
-            'gasoril-kid-drops': 'public/products/gasoril-kid.webp',
-            'nasril-xp-spray-drop': 'public/products/nasril-xp.webp',
-            'nasril-x-spray-drop': 'public/products/nasril-x.webp',
-            'nasril-f-spray': 'public/products/nasril-f.webp',
-            'sucracell-o-suspension': 'public/products/sucracell-o.webp',
-            'devac-syrup': 'public/products/devac-syrup.webp',
-            'softex-moisturiser': 'public/products/softex-moisturiser.webp',
-            'shadex-sunscreen': 'public/products/shadex-sunscreen.webp',
+            'gasoril-capsule': 'products/gasoril-capsule.webp',
+            'gasoril-psc-tablet': 'products/gasoril-psc.webp',
+            'gasoril-kid-drops': 'products/gasoril-kid.webp',
+            'nasril-xp-spray-drop': 'products/nasril-xp.webp',
+            'nasril-x-spray-drop': 'products/nasril-x.webp',
+            'nasril-f-spray': 'products/nasril-f.webp',
+            'sucracell-o-suspension': 'products/sucracell-o.webp',
+            'devac-syrup': 'products/devac-syrup.webp',
+            'softex-moisturiser': 'products/softex-moisturiser.webp',
+            'shadex-sunscreen': 'products/shadex-sunscreen.webp',
         }
         for pid, img_path in product_images.items():
             cursor.execute("UPDATE products SET image = ? WHERE id = ?;", (img_path, pid))
